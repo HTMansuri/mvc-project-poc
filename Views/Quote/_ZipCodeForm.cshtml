@@ -1,0 +1,8 @@
+@model VisitorSignalsPoc.Models.QuoteSelectionViewModel
+
+<p id="selected-product">Selected: <strong>@Model.ProductName</strong></p>
+<input type="hidden" id="quote-product" name="product" value="@Model.ProductCode" />
+<label for="zip">ZIP Code</label>
+<input id="zip" name="zip" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" placeholder="00000" autocomplete="postal-code" />
+<button id="zipSubmit-Container" class="btn primary" type="button">GET A QUOTE</button>
+<a id="continueSavedQuote" href="#saved-quote">Continue with a Saved Quote</a>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@(ViewData["Title"] ?? "Visitor Signals POC")</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" asp-controller="Home" asp-action="Index">Visitor Signals POC</a>
+        <span class="tag">MVC demonstration</span>
+    </header>
+    <main class="container">
+        @RenderBody()
+    </main>
+
+    @* Current working analytics implementation: POSTs to the local demo endpoint. *@
+    <script src="~/js/analytics-api-client.js" asp-append-version="true"></script>
+    <script src="~/js/click-tracking.js" asp-append-version="true"></script>
+    <script src="~/js/site-interactions.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

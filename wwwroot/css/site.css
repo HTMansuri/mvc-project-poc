@@ -1,0 +1,19 @@
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#183049;background:#f3f7fa}
+*{box-sizing:border-box}body{margin:0}.topbar{display:flex;justify-content:space-between;align-items:center;padding:18px max(20px,calc((100vw - 1100px)/2));background:#123459;color:#fff}.brand{color:#fff;font-weight:750;text-decoration:none}.tag{font-size:.8rem;opacity:.75}.container{max-width:1100px;margin:32px auto;padding:0 20px}.intro{margin-bottom:28px}.intro h1{font-size:2.1rem;margin:8px 0}.intro p{max-width:860px;line-height:1.55;color:#475c71}.eyebrow{letter-spacing:.11em;text-transform:uppercase;font-weight:750;font-size:.76rem;color:#357aa7}.columns{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.panel{background:#fff;border:1px solid #d8e2ea;box-shadow:0 4px 20px rgba(0,30,55,.035);border-radius:12px;padding:24px;margin-bottom:20px}.panel h2{margin:0 0 8px}.panel>p{line-height:1.5;color:#536779}.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0}.quotegriditem{min-height:96px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;border:1px solid #c9d9e7;background:#f8fbfd;color:#123459;border-radius:8px;font-size:1.4rem;text-decoration:none;transition:background .15s,border-color .15s}.quotegriditem span{font-size:.83rem;font-weight:650}.quotegriditem:hover,.quotegriditem.selected{background:#e8f3fa;border-color:#287ab1}.form{border-top:1px solid #e2e9ef;padding-top:18px;display:flex;flex-direction:column;gap:10px}.form label{font-size:.87rem;font-weight:650}.form input{width:170px;padding:11px 12px;border:1px solid #b9c9d8;border-radius:7px;font-size:1rem}.btn{border:0;border-radius:7px;padding:12px 16px;cursor:pointer;font-weight:700}.primary{background:#116eaa;color:#fff;max-width:205px}.secondary{border:1px solid #c2d3e2;background:#fff;color:#194d78}.form>a,.login a,.portal a{color:#17689d}.login{border:1px solid #d6e1eb;border-radius:8px;padding:18px;background:#f8fbfd;margin:22px 0}.login-heading{font-weight:750;margin-bottom:12px}.login-links{display:flex;gap:16px}.status{border-left:3px solid #87afcf;background:#f5f9fc;padding:14px 16px;border-radius:5px;font-size:.87rem}.status p{line-height:1.5;color:#42566a}.diagnostics{margin-top:3px}.diagnostic-line{margin:10px 0}.portal{max-width:760px}code{background:#eef3f6;padding:2px 5px;border-radius:4px;font-size:.9em}@media(max-width:800px){.columns{grid-template-columns:1fr}.quote-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* The quote form is loaded asynchronously after product selection. */
+.form[hidden], .login-links[hidden] { display: none !important; }
+.quote-loading { color: #536779; margin: 0; }
+.quote-error { color: #9f2738; margin: 0; }
+
+/* Two separate login menus, shown at their respective viewport widths. */
+.login-toggle { display: flex; width: 100%; justify-content: space-between; align-items: center; border: 0; padding: 0; background: transparent; color: #123459; text-align: left; cursor: pointer; font: inherit; }
+.login-toggle span { font-size: .85rem; }
+.login-links:not([hidden]) { display: flex; flex-direction: column; gap: 0; padding-top: 12px; }
+.login-links a { display: block; padding: 11px 8px; border-top: 1px solid #dfe8ef; text-decoration: none; }
+.login-links a:hover { background: #e8f3fa; }
+.mobile-login { display: none; }
+@media (max-width: 800px) {
+    .desktop-login { display: none; }
+    .mobile-login { display: block; }
+}

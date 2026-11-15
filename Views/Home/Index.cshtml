@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "Visitor Journey Tracking | POC";
+}
+<section class="intro">
+    <p class="eyebrow">MVC proof of concept · synthetic visitor interactions</p>
+    <h1>Visitor journey tracking</h1>
+    <p>This POC captures visitor interactions and sends analytics events to a local API.</p>
+</section>
+<div class="columns">
+    <section class="panel" aria-labelledby="quote-title">
+        <h2 id="quote-title">Start a quote</h2>
+        <p>Select a product to load ZIP-code entry, then click Get a Quote.</p>
+        <div class="quote-grid" id="comp-tab-quote">
+            <a id="quotegriditem_auto" class="item quotegriditem button" href="#quote-form" role="button">🚗 <span>Auto</span></a>
+            <a id="quotegriditem_home" class="item quotegriditem button" href="#quote-form" role="button">🏠 <span>Homeowners</span></a>
+            <a id="quotegriditem_condo" class="item quotegriditem button" href="#quote-form" role="button">🏢 <span>Condo</span></a>
+            <a id="quotegriditem_renters" class="item quotegriditem button" href="#quote-form" role="button">🔑 <span>Renters</span></a>
+            <a id="quotegriditem_umbrella" class="item quotegriditem button" href="#quote-form" role="button">☂️ <span>Umbrella</span></a>
+        </div>
+        <div class="form" id="quote-form" aria-live="polite" hidden></div>
+    </section>
+    <section class="panel" aria-labelledby="login-title">
+        <h2 id="login-title">Log in</h2>
+        <p>These routes open local destination pages; they don't authenticate anyone.</p>
+
+        <div class="login desktop-login" id="comp-header-desktop">
+            <button type="button" class="login-heading login-toggle" aria-expanded="false" aria-controls="desktop-login-links">LOG IN <span aria-hidden="true">▾</span></button>
+            <nav class="login-links" id="desktop-login-links" aria-label="Desktop login destinations" hidden>
+                <a id="personal-login-link" href="/cssportal">Personal</a>
+                <a id="commercial-login-link" href="/clportal">Business</a>
+            </nav>
+        </div>
+
+        @* Separate navigation markup for smaller screens. *@
+        <div class="login mobile-login button" id="comp-header-mobile">
+            <button type="button" class="login-heading login-toggle" aria-expanded="false" aria-controls="mobile-login-links">LOG IN <span aria-hidden="true">▾</span></button>
+            <nav class="login-links" id="mobile-login-links" aria-label="Mobile login destinations" hidden>
+                <a id="mobile-personal-login-link" href="/cssportal">Personal</a>
+                <a id="mobile-commercial-login-link" href="/clportal">Business</a>
+            </nav>
+        </div>
+    </section>
+</div>
+<section class="panel diagnostics" aria-labelledby="analytics-poc-title">
+    <h2 id="analytics-poc-title">Analytics event POC — working</h2>
+    <p>Click a product or navigate to a portal. Events are sent to <code>POST /api/analytics/events</code>
+       and retained in memory for inspection.</p>
+    <div class="diagnostic-line">Analytics adapter loaded: <strong id="analytics-state">Checking…</strong></div>
+    <div class="diagnostic-line">Recorded events: <strong id="event-count">—</strong></div>
+    <button type="button" class="btn secondary" id="refresh-events">Refresh analytics results</button>
+    <details>
+        <summary>View recent analytics event payloads</summary>
+        <pre id="recent-events">Click Refresh analytics results.</pre>
+    </details>
+</section>

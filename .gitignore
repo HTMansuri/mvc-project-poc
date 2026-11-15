@@ -1,0 +1,19 @@
+# .NET build and IDE output
+bin/
+obj/
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+TestResults/
+
+# Local secrets and runtime output
+.env
+.env.*
+*.log
+
+# Frontend dependency/build output (if added later)
+node_modules/
+dist/
+coverage/

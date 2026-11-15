@@ -1,0 +1,10 @@
+@model string
+@{
+    ViewData["Title"] = Model + " | Visitor Signals POC";
+}
+<section class="panel portal">
+    <p class="eyebrow">Local destination view</p>
+    <h1>@Model</h1>
+    <p>This local page demonstrates destination-page analytics events.</p>
+    <a asp-controller="Home" asp-action="Index">Return to homepage</a>
+</section>

@@ -1,0 +1,72 @@
+[
+  {
+    "itemId": "rule-auto-started",
+    "eventNameRegex": "^button-tap$",
+    "pageRegex": "",
+    "actionRegex": "",
+    "keyRegex": "^quotegriditem_auto$",
+    "descriptionRegex": "",
+    "propertyName": "sitecore_tabquote_auto",
+    "propertyValue": "started"
+  },
+  {
+    "itemId": "rule-home-started",
+    "eventNameRegex": "^button-tap$",
+    "pageRegex": "",
+    "actionRegex": "",
+    "keyRegex": "^quotegriditem_home$",
+    "descriptionRegex": "",
+    "propertyName": "sitecore_tabquote_home",
+    "propertyValue": "started"
+  },
+  {
+    "itemId": "rule-condo-started",
+    "eventNameRegex": "^button-tap$",
+    "pageRegex": "",
+    "actionRegex": "",
+    "keyRegex": "^quotegriditem_condo$",
+    "descriptionRegex": "",
+    "propertyName": "sitecore_tabquote_condo",
+    "propertyValue": "started"
+  },
+  {
+    "itemId": "rule-renters-started",
+    "eventNameRegex": "^button-tap$",
+    "pageRegex": "",
+    "actionRegex": "",
+    "keyRegex": "^quotegriditem_renters$",
+    "descriptionRegex": "",
+    "propertyName": "sitecore_tabquote_renters",
+    "propertyValue": "started"
+  },
+  {
+    "itemId": "rule-umbrella-started",
+    "eventNameRegex": "^button-tap$",
+    "pageRegex": "",
+    "actionRegex": "",
+    "keyRegex": "^quotegriditem_umbrella$",
+    "descriptionRegex": "",
+    "propertyName": "sitecore_tabquote_umbrella",
+    "propertyValue": "started"
+  },
+  {
+    "itemId": "rule-personal-login-page-view",
+    "eventNameRegex": "^page_view$",
+    "pageRegex": "/cssportal(?:[/?#]|$)",
+    "actionRegex": "",
+    "keyRegex": "",
+    "descriptionRegex": "",
+    "propertyName": "sitecore_pllogin_visited",
+    "propertyValue": "true"
+  },
+  {
+    "itemId": "rule-commercial-login-page-view",
+    "eventNameRegex": "^page_view$",
+    "pageRegex": "/clportal(?:[/?#]|$)",
+    "actionRegex": "",
+    "keyRegex": "",
+    "descriptionRegex": "",
+    "propertyName": "sitecore_cllogin_visited",
+    "propertyValue": "true"
+  }
+]
